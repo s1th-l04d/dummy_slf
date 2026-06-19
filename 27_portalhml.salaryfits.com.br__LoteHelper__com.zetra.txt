@@ -1,0 +1,5 @@
+portalhml.salaryfits.com.br
+com.zetra
+br.com.zetra.salaryweb
+CasamentoMargem
+ConsultarMargemService
