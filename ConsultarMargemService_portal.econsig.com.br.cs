@@ -1,0 +1,1 @@
+namespace com.zetra.econsig.Services { public class ConsultarMargemService { public void getMargens(string registrationNumber){ var url="https://portal.econsig.com.br"; MissingType.DoesNotExist(url); } } }
