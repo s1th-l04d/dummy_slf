@@ -1,5 +1,43 @@
-portalhml.salaryfits.com.br
-com.zetra
-br.com.zetra.salaryweb
-CasamentoMargem
-ConsultarMargemService
+private boolean entidadeUsuarioPodeModificarAde(String adeCodigo, AcessoSistema responsavel) throws AutorizacaoControllerException {
+
+    try {
+
+    boolean podeModificar = false;
+
+    if (responsavel.isSistema() || responsavel.isCse() || responsavel.isSup()) {
+
+    podeModificar = true;
+
+ 
+
+ 
+
+protected void verificarAcessoMenuDropDown(HttpSession session, AcessoSistema usuAcesso, List<MenuTO> mnuLst) {
+
+    session.setAttribute(ItemMenuEnum.ALTERAR_SENHA.getDescricao(), false);
+
+    session.setAttribute(ItemMenuEnum.SOBRE.getDescricao(), false);
+
+    session.setAttribute(ItemMenuEnum.TERMO_DE_USO.getDescricao(), false);
+
+    session.setAttribute(ItemMenuEnum.TERMO_DE_ADESAO.getDescricao(), false);
+
+    session.setAttribute(ItemMenuEnum.SAIR_DO_SISTEMA.getDescricao(), false);
+
+ 
+
+ 
+
+public String getResourcesMessage(String type) {
+
+    if (!TextHelper.isNull(messageKey) && (!TextHelper.isNull(type) || TextHelper.isNull(message))) {
+
+      String resourceMessage = null;
+
+ 
+
+      if (MENSAGEM_PROCESSAMENTO_XML.equals(type) && ServidorBloqueadoConvenioMessageKeys.isChaveBloqueioComCodigoSecundario(messageKey)) {
+
+          if (isCodigoSecundarioSoapHabilitado()) {
+
+              resourceMessage = ApplicationResourcesHelper.getMessage(messageKey + type, responsavel, messageArgs);
